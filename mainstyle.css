@@ -1,0 +1,193 @@
+body{
+	background:url(./image/img-background.jpg) repeat;			
+	margin: 0;
+	padding:0 0 0;
+	scroll: true;
+	width:1280px; height:1100px;
+}
+	
+	div canvas{
+		cursor:crosshair;
+		position:fixed;
+		top:0;
+		z-index:0;
+	}
+	
+	a{
+		color: black;
+		text-decoration: none;
+	}
+	
+	a:hover{
+		color: #a52a2a;
+		font-weight:bold;
+	}
+	
+		#upper{
+			background:url(./image/img-header.jpg) no-repeat center top;
+			width:1280px; height:310px;
+		}				
+			#title{ 
+				padding:45px 0 0 80px; text-align:left; 
+				font: bold 24px segoe script;
+				width: 980;
+				text-shadow:5px 2px 6px #000;
+			}
+			#quote{				
+				padding:0 0 0 80px; text-align:left; 		
+				font: 16px comic sans ms;
+				width: 980;
+			}	
+			
+			#navigator{
+				width:750px; height:30px; 
+				margin:60 0 0 80; 
+				padding:0 0; 
+				font: bold 16px comic sans ms;
+				text-align:left;
+				display: block;
+			}
+				#navigate ul li{
+					display:inline;
+					margin: 0 10px;
+					padding: 5px 0;			
+				}
+				#navigate li a:link{
+					 text-decoration: none;
+					 color: #a52a2a;			
+				}
+				#navigate li a:visited{
+					 text-decoration: none;
+					 color: grey;			
+				}
+				#navigate li a:active{
+					 text-decoration: none;
+					 color: #a52a2a;			
+				}
+		#lower{	
+			width:1280px; height:581px;				
+		}	
+			#status{
+				background:url(./image/img-div-background.jpg) repeat;				
+				text-align: left;						
+				border:1px #000000 solid;
+				-webkit-box-shadow:2px 2px 6px #000;
+				-moz-box-shadow:2px 2px 6px #000;
+				padding: 10 10;		
+			}
+				.titlediv{
+					cursor: move;					
+				}
+					.divtitle{
+						font: bold 14px comic sans ms;
+						color: #a52a2a;						
+					}
+				#statustextdiv{
+					width: 400px; height: 50px;
+				}
+					#statustext{
+						font: 14px consolas;
+						width: 400px; height: 50px;
+						word-wrap: break-word;
+						word-break: normal;
+					}
+					#statustime{
+						font: 10px consolas;
+						color: grey;
+					}
+				#submitdiv {
+					width: 400px; 
+					font: 14px consolas;
+				}
+					#statusarea{
+						font: 14px consolas;
+						margin: 50 0 0 0;
+						row: 4; col: 50;
+						width: 400px;
+						height: 50px;
+						resize: none;
+						type: text;
+					}					
+					#submit{
+						font: 14px consolas;
+					}
+						#statusbt{
+							font: 14px consolas;
+						}
+			#audiodiv{
+				background:url(./image/img-div-background.jpg) repeat;				
+				text-align: left;						
+				border:1px #000000 solid;
+				-webkit-box-shadow:2px 2px 6px #000;
+				-moz-box-shadow:2px 2px 6px #000;
+				padding: 10 10;		
+			} 						
+				#musicplayer{
+					width: 280px; height: 50px;
+				}
+			#userinfodiv{
+				background:url(./image/img-div-background.jpg) repeat;				
+				text-align: left;						
+				border:1px #000000 solid;
+				-webkit-box-shadow:2px 2px 6px #000;
+				-moz-box-shadow:2px 2px 6px #000;
+				padding: 10 10;
+			}	
+				#ipdiv{
+					font: 14px consolas;
+				}
+				#weatherdiv{
+					font: 14px consolas;
+				}
+			#selfdiv{
+				background:url(./image/img-div-background.jpg) repeat;				
+				text-align: left;						
+				border:1px #000000 solid;
+				-webkit-box-shadow:2px 2px 6px #000;
+				-moz-box-shadow:2px 2px 6px #000;
+				padding: 10 10;
+				font: 14px consolas;
+			}
+				#avatar{
+					border: 1px #d3d3d3 solid;
+					padding: 4;				
+				}
+				#infolist{
+					font: 14px consolas;
+					Padding-left:20px;					
+				}
+			#visitorcountdiv{
+				background:url(./image/img-div-background.jpg) repeat;				
+				text-align: left;						
+				border:1px #000000 solid;
+				-webkit-box-shadow:2px 2px 6px #000;
+				-moz-box-shadow:2px 2px 6px #000;
+				padding: 10 10;
+				font: 14px consolas;
+			}
+			#experiencediv{
+				background:url(./image/img-div-background.jpg) repeat;				
+				text-align: left;						
+				border:1px #000000 solid;
+				-webkit-box-shadow:2px 2px 6px #000;
+				-moz-box-shadow:2px 2px 6px #000;
+				padding: 10 10;
+				font: 14px consolas;
+			}
+				#explist{
+					font: 14px consolas;
+					Padding-left:20px;					
+				}
+			#linkdiv{
+				background:url(./image/img-div-background.jpg) repeat;				
+				text-align: left;						
+				border:1px #000000 solid;
+				-webkit-box-shadow:2px 2px 6px #000;
+				-moz-box-shadow:2px 2px 6px #000;
+				padding: 10 10;
+				font: 14px consolas;
+			}
+				#linklist{
+					font: 14px consolas;
+					Padding-left:20px;					
+				}

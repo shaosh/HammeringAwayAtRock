@@ -1,0 +1,188 @@
+<!doctpyt html>
+
+<html lang="en-US">
+<head>
+	<title>Hammering Away At Rock</title>
+	<link rel="stylesheet" type="text/css" href="mainstyle.css" />
+	<script type="text/javascript" src="mainscript.js"></script>
+	<script type="text/javascript" src="http://counter.sina.com.cn/ip/" charset="UTF-8"></script> 
+	<script type="text/javascript" src="http://www.iplocationtools.com/iplocationtools.js?key=6171616266737d67686f66706c76757b7f6f642d6f717d"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+</head>
+
+<body style="width:1280px; height:1100px; top:0; left:0;" onmousemove="move(event)"  onmouseup="up()" >
+	<script type="text/javascript">
+		detectip();
+	</script>
+<!--	<div id="container" style="width:1280px; height:1000px; top:0; left:0;"> -->
+	<div id="upper">
+		<div id="title">
+			<p>Hammering Away At Rock</p>			
+		</div>
+		<div id="quote">
+			<p>When nothing seems to help, I go look at a stonecutter hammering away at his rock perhaps a hundred<br />
+			   times without as much as a crack showing in it. Yet at the hundred and first blow it will split in two,<br />
+			   and I know it was not that blow that did it, but all that had gone before.<br />
+			</p>
+		</div>
+	<!--	<div id="navigator"  style="position: absolute; z-index: 2;">
+			<nav id="navigate">
+				<ul>
+					 <li><a href="javascript:slideright()">Home</a></li>
+					<li><a href="javascript:slideleft()">Projects</a></li> 
+				</ul>
+			</nav> 
+		</div>
+	</div>-->
+	<div id="lower" style="width:1280px; height:581px; top:310px; left:0;">
+		<div id="status" style="position: absolute; width: 400px; left: 440px; top: 360px; z-index: 2;" >
+			<div class="titlediv" onmousedown="down(document.getElementById('status'),event)">
+				<label class="divtitle">Status</label>
+			</div>
+			<hr />				
+			<div id="statustextdiv">
+				<p id="statustext">
+					<script type="text/javascript">						
+						updatestatus();
+					</script>				
+				</p>					
+				<label id="statustime"></label><br />				
+			</div>
+			<div id="submitdiv">
+				<textarea id="statusarea" type="text" placeholder="Wanna say something? You can type 140 letters." value="" onKeyDown="checkLength(this.value)" onKeyUp="checkLength(this.value)"></textarea><br />
+				<p id="submit">											
+					<label>You can still type </label>
+					<label id="rest">140</label>
+					<label> letters.</label>
+					<input type="button" id="statusbt" value="submit"  onClick="submitstatus()" />							
+				</p>
+			</div>				
+		</div>
+		<div id="audiodiv" style="position: absolute; width: 300px; left: 900px; top: 360px; z-index: 2;">
+			<div class="titlediv" onmousedown="down(document.getElementById('audiodiv'),event)">
+				<label class="divtitle">Music Player</label>
+			</div>
+			<hr />				
+			<div id="selectmusic">
+				<select id="musiclist" onchange="selectmusic()" style="font: 14px consolas;">
+					<option>Select one version of Canon</option>
+					<option value="http://61.186.188.131/blog/UploadFiles/2008-10/232229643723.mp3">piano</option>
+					<option value="http://video.qzsohu.com/musme/music1.mp3">flute</option>	
+					<option value="http://music.jpoping.org/music2/gorge.mp3">violin</option>
+					<option value="http://freeplayergrem.free.fr/Canon/Canon_Rock(bg).mp3">rock</option>						
+				</select>
+			</div>
+			<audio id="musicplayer" controls>
+				Your browser dows not support the audio tag
+			</audio>
+		</div>			
+		<div id="userinfodiv" style="position: absolute; width: 300px; left: 900px; top: 530px; height: 290px; z-index: 2;">
+			<div class="titlediv" onmousedown="down(document.getElementById('userinfodiv'), event)">
+				<label class="divtitle">Location Info</label>
+			</div>
+			<hr />
+			<div id="ipdiv">
+				<b><label>Your IP: </label></b>
+				<label id="ip"></label><br />
+				<b><label>Your Location: </label></b><br />
+				<label id="flag"></label>
+				<label id="location"></label><br />	
+				<b><label>ZIP Code: </label></b>
+				<label id="zip"></label>					        
+				<script type="text/javascript"> 
+					document.getElementById('ip').innerText = ILData[0];
+					setip(ILData[0]);						
+				</script>										
+				<script type="text/javascript">					<!--
+					document.getElementById('location').innerText = ip2location_country_long() + ', ' + ip2location_region() + ', ' + ip2location_city() ;
+					document.getElementById('zip').innerText = ip2location_zip_code();	
+					document.getElementById('flag').innerHTML = ip2location_flag();
+					setzip(ip2location_zip_code());
+				//-->
+				</script>					
+			</div>
+			<div id="weatherdiv">
+				<b><label>Weather: </label></b><br />
+				<label id="icon"></label>
+				<label id="weather"></label>					
+				<label id="temp"></label></label><br />
+				<script type="text/javascript">
+					getWeather();
+				</script>
+			</div>
+			<br />
+			<div id="bannerdiv">
+					<script language="JavaScript"> document.write(ip2location_banner1()); </script>
+			</div>
+		</div>
+		<div id="selfdiv" style="position: absolute; width: 300px; left: 80px; top: 360; z-index: 2;">
+			<div class="titlediv" onmousedown="down(document.getElementById('selfdiv'), event)">
+				<label class="divtitle">Personal Info</label>
+			</div>
+			<hr />				
+			<div id="avatardiv">
+				<img id="avatar" src="image/img-avatar.jpg" />
+			</div>
+			<div id="selfinfo">
+				<ul id="infolist">
+					<li><label>Shihuan Shao</label><br /></li>
+					<li><label>Master student of Computer Science</label><br /></li>
+					<li><label>School of Computing, Informatics, and Decision Systems Engineering</label><br /></li>
+					<li><label>Arizona State University</label><br /></li>
+					<li><a href="mailto:sshao1@asu.edu" style="text-decoration: none;">Contact: sshao1 at asu dot edu</a></li>						
+				</ul>
+			</div>				
+		</div>
+		<div id="visitorcountdiv" style="position: absolute; width: 300px; left: 80px; top: 750; z-index: 2;">
+			<div class="titlediv" onmousedown="down(document.getElementById('visitorcountdiv'),event)">
+				<label class="divtitle">Visitor Counter</label>
+			</div>
+			<hr />
+			<div id="clustrmaps-widget"></div>
+			<script type="text/javascript">
+				var _clustrmaps = {'url' : 'http://hammeringawayatrock.net', 'user' : 1085201, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2013-03-20', 'lang' : 'zh', 'corners' : 'square' };
+				(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();
+			</script>
+			<noscript>
+				<a href="http://www2.clustrmaps.com/user/e24108f11">
+					<img src="http://www2.clustrmaps.com/stats/maps-no_clusters/hammeringawayatrock.net-thumb.jpg" alt="Locations of visitors to this page" />
+				</a>
+			</noscript>
+		</div>
+		<div id="end">
+		</div>
+		<div id="experiencediv" style="position: absolute; width: 400px; left: 440px; top: 670; z-index: 2;">
+			<div class="titlediv" onmousedown="down(document.getElementById('experiencediv'), event)">
+				<label class="divtitle">My Professional Experience</label>
+			</div>
+			<hr />				
+			<div id="expinfo">
+				<ul id="explist">							
+					<li><label>Software Development Intern in Pearson</label></li>
+					<label>2013.6 - 2013.8 EC2 Deployment Automation</label>
+					<li><label>Teaching Assistant in ASU</label></li>
+					<label>2013.1 - 2013.5 CSE205 Object Oriented Programming</label>
+				</ul>
+			</div>			
+		</div>
+		<div id="linkdiv" style="position: absolute; width: 400px; left: 440px; top: 870; z-index: 2;">
+			<div class="titlediv" onmousedown="down(document.getElementById('linkdiv'), event)">
+				<label class="divtitle">My Links</label>
+			</div>
+			<hr />				
+			<div id="link">
+				<ul id="linklist">							
+					<li>My LinkedIn</li>
+					<a href="www.linkedin.com/pub/shihuan-shao/27/782/14b/">www.linkedin.com/pub/shihuan-shao/27/782/14b/</a>
+					<li>My GitHub</li>
+					<a href="github.com/shaosh">github.com/shaosh</a>
+				</ul>
+			</div>			
+		</div>
+		
+	</div>
+		
+	<script type="text/javascript" src="js/harmony.js"></script>
+	<script>harmony()</script>
+</body>
+</html>
